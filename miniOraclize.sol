@@ -69,6 +69,10 @@ contract usingMiniOraclize {
         return false;
     }
     
+    function oraclize_cbAddress() oraclizeAPI internal returns (address) {
+        return oraclize.cbAddress();
+    }
+    
     function getCodeSize(address _addr) constant internal returns(uint _size) {
         assembly {
             _size := extcodesize(_addr)
